@@ -1,0 +1,83 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-std=c++23",
+      "-Wall",
+      "-fno-rtti",
+      "-g",
+      "-O0",
+      "-Wno-literal-suffix",
+      "-Wno-format-diag",
+      "-I/usr/lib/gcc/x86_64-linux-gnu/12/plugin/include",
+      "-fPIC",
+      "-c",
+      "-o",
+      "padding_check_c.o",
+      "padding_check.cpp"
+    ],
+    "directory": "/home/domaskal/development/gcc_padding_check_plugin",
+    "file": "/home/domaskal/development/gcc_padding_check_plugin/padding_check.cpp",
+    "output": "/home/domaskal/development/gcc_padding_check_plugin/padding_check_c.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-fplugin=./padding_check_c.so",
+      "-c",
+      "-I",
+      "test/exclude_dir",
+      "-I",
+      "test/inc_dir",
+      "-isystem",
+      "test/sys_dir",
+      "-o",
+      "/dev/null",
+      "test/test.c"
+    ],
+    "directory": "/home/domaskal/development/gcc_padding_check_plugin",
+    "file": "/home/domaskal/development/gcc_padding_check_plugin/test/test.c",
+    "output": "/dev/null"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-std=c++23",
+      "-Wall",
+      "-fno-rtti",
+      "-g",
+      "-O0",
+      "-Wno-literal-suffix",
+      "-Wno-format-diag",
+      "-I/usr/lib/gcc/x86_64-linux-gnu/12/plugin/include",
+      "-DUSE_CXX_PRINT",
+      "-fPIC",
+      "-c",
+      "-o",
+      "padding_check_cxx.o",
+      "padding_check.cpp"
+    ],
+    "directory": "/home/domaskal/development/gcc_padding_check_plugin",
+    "file": "/home/domaskal/development/gcc_padding_check_plugin/padding_check.cpp",
+    "output": "/home/domaskal/development/gcc_padding_check_plugin/padding_check_cxx.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-fplugin=./padding_check_cxx.so",
+      "-c",
+      "-I",
+      "test/exclude_dir",
+      "-I",
+      "test/inc_dir",
+      "-isystem",
+      "test/sys_dir",
+      "-o",
+      "/dev/null",
+      "test/test.cc"
+    ],
+    "directory": "/home/domaskal/development/gcc_padding_check_plugin",
+    "file": "/home/domaskal/development/gcc_padding_check_plugin/test/test.cc",
+    "output": "/dev/null"
+  }
+]

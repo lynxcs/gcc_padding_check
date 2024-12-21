@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.def": "cpp",
+        "*.inc": "cpp",
+        "string_view": "cpp",
+        "typeid2.C": "cpp"
+    },
+}

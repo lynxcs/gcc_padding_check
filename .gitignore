@@ -1,0 +1,6 @@
+gcc-12.1.0
+gcc-build
+gcc-install
+*.o
+*.so
+.cache
